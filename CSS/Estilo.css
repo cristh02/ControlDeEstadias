@@ -1,0 +1,76 @@
+/*Configuracion del logotipo*/
+#iLogo{
+    max-width: 100%;
+    height: auto;
+}
+/*Configuracion de resto del lienzo*/
+.contenedorI{
+    background-image: url("../IMAGENES/inicio.png");
+    height:100vh;
+    background-size:cover;
+    background-position: center;
+    
+}
+.contenedor {
+	width: 1000px;
+	margin: 10 auto;	
+	padding: 5em;	
+}
+.contenedorF{
+    width:1000px;
+    height:2000;
+}
+
+#grafica, #consulta {
+	padding: 5px 5px;	
+	text-align:center;
+}
+.form {
+	text-align: center;
+	margin: 0 auto;	
+	max-width: 320px;
+}
+
+table {
+	cursor: pointer;
+	padding:30px;
+	width: 100%;
+}
+
+th {
+	background: rgb(66, 159, 202); 
+	border-color: rgb(66, 159, 202);
+}
+
+tr, td {
+	border: 1px solid rgb(66, 159, 202);
+	border-radius: 10px;
+}
+table.format{
+    border:0px;
+}
+.menup{
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+.menup:hover, .menup:focus {
+    background-size: 100% 2px;
+}
+/*Tablas general y otras*/
+@media screen and (max-width: 920px) {
+     table {
+       display: block;
+       overflow-x: auto;
+     }
+}
+.contenedorT {
+	margin:0;	
+}
+.tableG{
+    margin:0;
+    overflow-x:scroll;
+}

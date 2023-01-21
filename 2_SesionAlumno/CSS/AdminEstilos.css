@@ -1,0 +1,138 @@
+body.admin{
+	position: absolute;
+	margin-right: 0;
+	margin-top: 80;
+    background-color: rgb(226, 255, 240);
+	font-family: Georgia;
+	color: #5baad8;
+}
+header {
+	width: 100%;
+	height: 15%;
+	left: 0; 
+	top: 0; 
+	position: fixed;
+	z-index:1; 
+	background-color:  rgba(70, 0, 0, 0.842);
+}
+div.Encuadre{
+	position: absolute;
+	margin-right: 0;
+	margin-top: 40;
+	color: orange;
+}
+a{
+	margin-left: 10;
+	font-family: Georgia, serif;
+	color: rgb(4, 226, 141);
+}
+img.Logo{
+	height: 90;
+	margin-left: 5px;
+	}
+h1#titulo{
+	margin: -65;
+	margin-left: 150;
+	color: #23cc71;
+	position: fixed;
+}
+div#Menu{
+	margin-top: 30;
+	border-radius:5px;
+	margin-left: -8px;
+	position: fixed;
+	z-index:1; 
+	width: 35px;
+	height: 50%;
+	background-color: #090e07c5;
+	overflow: hidden;
+	-webkit-transition: width 0.5s;
+}
+
+div#menu:hover{
+	width: 200px;
+}
+div#logo-Principal{
+	border-radius: 2px;
+	width: 32px;
+	height: 27px;
+	margin: 0px;
+	background-image: url(Imagenes/Var.png);
+}
+div.contenedor{
+	margin-top: 8px;
+	width: 186px;
+	height: 25px;
+	margin-left: 4px;
+	background-color: black;
+}
+div.logo-interior{
+	width: 20px;
+	height: 17px;
+	border-radius: 3px 10px 10px 3px;
+	background-image: url(Imagenes/seleccion.png);
+	margin-left: 3;
+	float:left;
+}
+div.texto{
+	margin-left: 15px;
+}
+div#contenedor-primero{
+	margin-top: 15px;
+}
+th{
+	color: black;
+	font-style: italic;	
+}
+
+
+/*inicio*/
+h1.otro{
+	margin-top: 22;
+	margin-left: 450;
+}
+/* solo este H1 es de la pantalla principal*/
+h1.principal{
+	margin-top: -17;
+	margin-left: 450;
+}
+img.fondo{
+	margin-right: -70;
+	width: 1280px;
+	height: 700px;
+	margin-left: -8;
+}
+
+/*gestion Documento*/
+body.gestion{
+	margin-left: 80px;
+}
+body.generar{
+	margin-top: 15px;
+	margin-left: 50px; /*nueve el doc mas no el contenedor*/
+}
+iframe{
+	margin-left: 40;
+	margin-top: 15;
+	width: 2300px;
+	height: 6000px;
+	position: absolute;
+}/*
+img.Logo2{
+	margin-top: 200;
+	width: 165px;
+	height: 150px;
+	margin: 0px;
+	border: 10px;
+	border-radius: 2px;
+}*/
+/* BD_Inicial*/
+body.cuadro{
+margin-top: 15px;
+margin-left: 15px;
+}
+input.pdf{
+	background-color: #23cc71;
+	margin-top: 15px;
+	margin-left: 40px;
+}

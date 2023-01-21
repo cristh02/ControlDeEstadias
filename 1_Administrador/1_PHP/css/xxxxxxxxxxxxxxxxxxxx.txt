@@ -1,0 +1,87 @@
+ <?php
+$usuario = "root";
+$contrasena = "";  
+$servidor = "localhost";
+$basededatos = "InformacionAlumno";
+
+$conexion = mysqli_connect($servidor, $usuario, $contrasena, $basededatos);
+
+	if(mysqli_connect_errno()){
+		echo 'Error de comunicacion con Base de Datos: ', mysqli_connect_error();
+		exit();
+	}
+	
+                if(isset($_POST['btn_buscar'])){
+		$buscar_text=$_POST['buscar'];
+		$select_buscar=$con->prepare('
+			SELECT *FROM Usuarios WHERE Matricula LIKE :campo OR Generacion LIKE :campo;'
+		);
+
+		$select_buscar->execute(array(
+			':campo' =>"%".$buscar_text."%"
+		));
+
+		$resultado=$select_buscar->fetchAll();
+
+	}
+	echo '<table border=1px><tr> <td>PERIODO</td> <td>APELLIDO PATERNO</td>  <td>APELLIDO MATERNO</td> <td>NOMBRE</td> <td>GENERACION</td> 
+	<td>EXTENCION</td> <td>MODALIDAD</td> <td>CARRERA</td> <td>MATRICULA</td> <td>NOMBRE COMPLETO</td> <td>GENERO</td> <td>CURP</td> <td>INDUCCION</td>
+	</tr>';	
+	
+	mysqli_select_db($conexion, $basededatos) or die("No se encontró la Base de Datos.");
+	$Consulta = "SELECT Periodo, PAterno, MAterno, Nombre, Generacion, Extencion, Modalidad, Carrera, Matricula, NomCompleto, Genero, Curp, Induccion FROM Usuarios;";
+	$resultado = mysqli_query($conexion,$Consulta);
+
+	if ($resultado = mysqli_query($conexion, $Consulta)) {
+
+		/* obtener array asociativo */
+		while ($row = mysqli_fetch_assoc($resultado)) {
+			echo '<tr>';
+			echo '<td>';
+			    printf ("%s\n", $row["Periodo"]);
+			echo '</td>';
+			echo '<td>';
+			    printf ("%s\n", $row["PAterno"]);
+			echo '</td>';
+			echo '<td>';
+			    printf ("%s\n", $row["MAterno"]);
+			echo '</td>';
+			echo '<td>';
+			    printf ("%s\n" , $row["Nombre"]);
+			echo '</td>';
+			echo '<td>';
+			    printf ("%s\n", $row["Generacion"]);
+			echo '</td>';
+			echo '<td>';
+			    printf ("%s\n", $row["Extencion"]);
+			echo '</td>';
+			echo '<td>';
+			    printf ("%s\n", $row["Modalidad"]);
+			echo '</td>';
+			echo '<td>';
+			    printf ("%s\n", $row["Carrera"]) ;
+			echo '</td>';
+			echo '<td>';
+			    printf ("%s\n", $row["Matricula"]) ;
+			echo '</td>';
+			echo '<td>';
+			    printf ("%s\n", $row["NomCompleto"]) ;
+			echo '</td>';
+			echo '<td>';
+			    printf ("%s\n", $row["Genero"]) ;
+			echo '</td>';
+			echo '<td>';
+			    printf ("%s\n", $row["Curp"]) ;
+			echo '</td>';
+			echo '<td>';
+			    printf ("%s\n", $row["Induccion"]) ;
+			echo '</td>';
+			echo '</tr>';
+		}
+		/* liberar el conjunto de resultados */
+		mysqli_free_result($resultado);
+	}
+	echo '</table>';
+	mysqli_close($conexion);
+
+?>

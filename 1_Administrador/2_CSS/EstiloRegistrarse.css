@@ -1,0 +1,89 @@
+body{
+    position: absolute;
+    margin-right: 0;
+    background-color: rgb(75, 83, 82);
+}
+.fondo{
+    width: 420px;
+    height: 240;
+    border-radius: 0 0 40px 40px;
+    margin-left: 15;
+    margin-top: -60;
+}
+.fond2{
+    width: 400px;
+    height: 200;
+    border-radius: 0 0 40px 40px;
+    margin-left: 850;
+    margin-top: -201;
+}
+#segundo{/* este es el logo rojo*/
+    margin-top: -83;
+    margin-left: 180;
+    color: rgb(228, 84, 65);
+    font-size: 50pt;  
+    position: static;
+}
+h1{
+    margin-top: -180;
+    margin-left: -140px;
+    color: limegreen;
+    font-size: 50pt;
+    position: static;
+}
+p{
+    font-size: 25pt;
+    color: rgb(255, 255, 255);
+}
+.datos{
+    font-size: 25pt;
+    color: rgb(255, 255, 255);
+}
+.form{
+    position: relative;
+    width: 300px;
+    height: 880px;
+    padding-left: 20px;
+    padding-top: 15px;
+    background-color: rgb(45, 196, 95); 
+    border-radius: 20px;
+    margin: auto;
+}
+label{
+    font: 20px normal normal uppercase helvetica, arial, serif;
+    color: rgb(0, 0, 0);
+}
+input[type=text],[type=date],[type=password]{
+    width: 260px;
+    height: 25;
+    font: 18px normal normal uppercase helvetica, arial, serif;
+    color: rgb(13, 17, 24);
+}
+button {
+    margin-top: 30;
+    margin-left: 70;
+	font: 700 1em Tahoma, Arial, Verdana, sans-serif;
+	cursor: pointer;
+}
+button {
+    border-radius: 20px 20px 20px 20px;
+	width: auto; /* ie */
+	overflow: visible; /* ie */
+    padding: 1px 1px 1px 1px; /* ie */
+    background-color: rgb(45, 196, 95);
+}
+button[type] {
+	padding: 1px 1px 1px 1px; /* firefox */
+}
+#ima{
+    border-radius: 18px;
+    width: 130;
+    height: 58;
+    
+}
+.regreso{
+    margin-top: 100;
+    margin-left: 10;
+    font-size: 14pt;
+    color: rgb(0, 110, 138);
+}

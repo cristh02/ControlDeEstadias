@@ -1,0 +1,123 @@
+<!DOCTYPE HTML5>
+    <HTML lang="es">
+        <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <script src="jquery-3.3.1.min.js"></script>
+            <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+            
+            <link rel="stylesheet" type="text/css" href="CSS/EstiloRegistrarse.css">
+            <meta charset="utf-8">
+            <img class="fondo" src="Imagenes/cC4nyWZWyWTnp0Dd.jpg">
+            <img class="fond2" src="Imagenes/Nanchital.jpg">
+            <TITLE>Registrarse</TITLE>
+        </head>
+
+        <body>
+            <div><center><h1>Regis</h1><h1 id="segundo">trate</h1></center></div>
+            <div class="form">
+                <br>
+                <form action="Registrar.php" method="POST">
+                    <p>DATOS ACADÉMICOS</p>
+                    <label for="Matricula">Matricula</label>
+                    <input type="text" name="Matricula" required>
+                    <br>
+                    <label for="Carrera">Carrera</label>
+                    <input type="text" name="Carrera" list="Carreras"  required>
+                    <br>
+                    <label for="Extención">Extención</label>
+                    <input type="text" name="Extención" list="Extenciones"  required>
+                    <br>
+                    <label for="Modalidad">Modalidad</label>
+                    <input type="text" name="Modalidad" list="Modalidades" required>
+                    <br>
+                    <label for="Generación">Generación</label>
+                    <input type="text" name="Generación" placeholder="2018-2020" required>
+                    <br>
+                    <p>DATOS PERSONALES</p>
+                    <label for="Nombre">Nombre (s)</label>
+                    <input type="text" name="Nombre" required onkeyup="this.value=this.value.toUpperCase();">
+                    <br>
+                    <label for="Apaterno">Apellido Paterno</label>
+                    <input type="text" name="Apaterno" required onkeyup="this.value=this.value.toUpperCase();">
+                    <br>
+                    <label for="Amaterno">Apellido Materno</label>
+                    <input type="text" name="Amaterno" required onkeyup="this.value=this.value.toUpperCase();">
+                    <br>
+                    <label for="CURP">CURP</label>
+                    <input type="text" name="CURP" required onkeyup="this.value=this.value.toUpperCase();">
+                    <br>
+                    <p>DATOS DE USUARIO</p>
+                    <label for="email">Correo</label>
+                    <input type="text" name="email" required>
+                    <br>
+                    <label for="Contra">Contraseña</label>
+                    <input type="password" name="Contra" required>
+                    <br>
+                    <label for="Contras">Contraseña (nuevamente)</label>
+                    <input type="password" name="Contras" required>
+                    <br>
+                    <label for="FechNacimiento">Fecha de Nacimiento</label>
+                    <input type="date" href="#"id="FechNacimiento" name="FechNacimiento"  placeholder="Dia-Mes-Año" required>
+                    <br>
+                        <span class="label label-success">
+                            <span id="edadCalculada"></span>
+                        </span>
+                    <br>
+                    <label for="Genero">Genero </label>
+                    <input type="text" name="Genero" list="Generos" placeholder="Masculino / Femenino"required>
+                    <br>
+                    
+                    <br>
+                    <button type="submit"><img id="ima" src="Imagenes/iu.PNG"/></button>
+                </form>
+                <datalist id="Generos">
+                    <option value="Masculino">
+                    <option value="Femenino">      
+                </datalist>
+                <datalist id="Carreras">
+                    <option value="ING. EN Tecnologías de la información">
+                    <option value="ING. MECATRÓNICA">
+                    <option value="ING. EN MANTO IND">
+                    <option value="ING. QUÍMICA">
+                        <option value="TSU TIC">
+                        <option value="TSU Contaduría">
+                        <option value="TSU Mantenimiento Área Industrial">
+                        <option value="TSU Mecatrónica área Automatización">
+                        <option value="TSU Química Industrial">
+                        <option value="TSU Mecánica área Automotriz">
+                        <option value="TSU Administración área Capital Humano">
+                        <option value="TSU Energías Renovables">
+                        </option>
+                    </option>      
+                </datalist>
+                <datalist id="Extenciones">
+                    <option value="Nánchital">
+                    <option value="Angel R. Cabada">  
+                    <option value="Agua Dulce">      
+                </datalist>
+                <datalist id="Modalidades">
+                    <option value="Escolarizado">
+                    <option value="Despresurizado">      
+                </datalist>
+            </div>
+            
+        </body>
+    </HTML>
+    <script type="text/javascript">
+    
+        $(document).ready(function(){
+            $('#FechNacimiento').change(function(){
+                $.ajax({
+                    type:"POST",
+                    data:"fecha=" + $('#FechNacimiento').val(),
+                    url:"PHP/CalculaEdad.php",
+                    success:function(r){
+                        $('#edadCalculada').text(r + " años");
+                        alert("Datos gurdados con Exito");
+                    }
+                });
+            });
+        });

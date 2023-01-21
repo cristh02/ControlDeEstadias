@@ -1,0 +1,52 @@
+body.doc{
+ font-size: 22px;
+ margin: 0;
+ background: #fff;
+ font-family: italic;
+ 
+  
+}
+h1{
+text-align: center;
+    color: black;
+    font-size: 30px;
+}
+
+fieldset{
+background-color: #f4f1ed;
+color: firebrick; 
+border-color: darkgoldenrod;
+border: 9px groove (internal value);
+border-radios: 7px;
+width: 600px;
+}
+legend{
+color:darkblue;
+font-weight: bold;
+}
+
+.button{
+    border: none;
+    width: 55%;
+    color: black;
+    font-size: 20px;
+    background:  orange;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.fondo1{
+    margin-left: 380px;
+    width: 100px;
+    height: 100px;
+}
+.fond2{
+    margin-left: 5px;
+    width: 200px;
+    height: 100px;
+}
+.fondo3{
+    margin-left: 290px;
+    width: 270px;
+    height: 90px;
+}

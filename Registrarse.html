@@ -1,0 +1,61 @@
+<!DOCTYPE HTML5>
+    <HTML lang="es">
+        <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <script src="1_Administrador/7_JavaScript/jquery-3.3.1.min.js"></script> <!--Uso de ajax para mostra los datos de matricula con esta libreria-->
+            <script src="1_Administrador/7_JavaScript/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+            
+            <link rel="stylesheet" type="text/css" href="1_Administrador/2_CSS/EstiloRegistrarse.css">
+            <meta charset="utf-8">
+            <a href="index.html"><img class="fondo" src="1_Administrador/3_Imagenes/cC4nyWZWyWTnp0Dd.jpg"></a>
+            <img class="fond2" src="1_Administrador/3_Imagenes/Nanchital.jpg">
+            <TITLE>Registrarse</TITLE>
+        </head>
+        <script>
+            $(document).ready(function() {
+            $("#resultado").html('<p>Escribe tu matrícula arriba</p>');
+            });
+
+            function buscar() {
+            var textoBusqueda = $("input#busqueda").val();
+	
+                if (textoBusqueda != "") {
+                    $.post("1_Administrador/1_PHP/buscarMatricula.php", {valorBusqueda: textoBusqueda}, function(mensaje) {
+                        $("#resultadoBusqueda").html(mensaje); }); 
+                } else { 
+                ("#resultadoBusqueda").html('<p>Aún no existen registro de tus datos</p>');
+	            };
+            };
+        </script>
+        <body>
+            <div><center><h1>Regis</h1><h1 id="segundo">trate</h1></center></div>
+            <div class="form">
+                <br>
+                <form action="1_Administrador/1_PHP/Registrar.php" method="POST">
+                    
+                    <p>DATOS DE USUARIO</p>
+                    <label for="Usuario"> Usuario</label>
+                    <input type="text" name="Usuario" placeholder="Elí_Hernandez-29" required>
+                    <br>
+                    <label for="email">Correo</label>
+                    <input type="text" name="email" required>
+                    <br>
+                    <label for="Contra">Contraseña</label>
+                    <input type="password" name="Contra" required>
+                    <br>
+                    <label for="Contras">Contraseña (nuevamente)</label>
+                    <input type="password" name="Contras" required>
+                    <br>
+                    <p>DATOS PERSONALES</p>
+                    <label for="Matricula"> Matricula</label>
+                        <input type="text"  maxlength="8" name="Matricula" id="busqueda" value="" placeholder="18190011" maxlength="30" autocomplete="off"  onKeyUp="buscar();" />
+                        <div id="resultadoBusqueda"></div>
+                    <button type="submit"><img id="ima" src="1_Administrador/6_Iconos/iu-3.jpeg"/></button>
+                </form>
+                
+            </div>
+            
+        </body>
+    </HTML>

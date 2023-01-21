@@ -1,0 +1,62 @@
+.fond2{
+width: 140px;
+height: 80px;
+}
+.fondo1{
+    width: 80px;
+    height: 75px;
+    margin-left: 440px;
+}
+.fondo3{
+    width: 190px;
+    height: 70px;
+    margin-left: 370px;
+}
+h1.ache{
+    font-size: 16pt;
+}
+p.fecha{
+    font-size: 12pt;
+    margin-left: 900px;
+    margin-top: -20px;
+}
+input[type=date]{
+    margin-top: -45px;
+    margin-left: 1015px;
+width: 130px;
+}
+a.dro{
+    font-size: 11pt;
+    font-weight: bold;
+}
+input.Empresa{
+    width: 400px;
+    height: 20;
+}
+table.check{
+    margin-left: 250px;
+    width: 700px;
+}
+label.selec{
+    font-size: 14pt;
+    font: uppercase helvetica, arial, serif;
+    color: rgb(13, 17, 24);
+}
+table.firmas{
+    border-radius: 10px;
+    margin-left: 420px;
+}
+
+
+
+
+
+
+
+
+inpu[type=text],[type=date],[type=password]{
+    width: 260px;
+    height: 25;
+    font: 18px normal normal uppercase helvetica, arial, serif;
+    color: rgb(13, 17, 24);
+}

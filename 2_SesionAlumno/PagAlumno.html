@@ -1,0 +1,62 @@
+<HTML lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Area Estadías</title>
+	<link rel="stylesheet" type="text/css" href="CSS/AdminEstilos.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+	<script>src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"
+	</script>
+</head>
+
+<script>
+  $(document).ready(function(){
+  $('#Inicio').click(function(){
+  $("#contenido").load("inicio.html");
+    })
+  });
+  $(document).ready(function(){
+  $('#GenerarDocumento').click(function(){
+  $("#contenido").load("GenerarDocumento.html");
+    })
+  });
+</script>
+
+<header>
+		<img class="Logo" src="Imagenes/utsv.png">
+		<h1 id="titulo">UNIVERSIDAD TECNOLÓGICA DEL SURESTE DE VERACRUZ</h1>
+</header>
+
+<body class="admin">
+	
+	<div id="Menu">
+		<div id="logo-Principal">
+		</div>
+		<div id="contenedor-primero" class="contenedor">
+			<div class="logo-interior">	
+			</div>
+			<a href="#" id="Inicio">Inicio</a>
+		</div>
+		
+		<div class="contenedor">
+			<div class="logo-interior">					
+			</div>
+			<a href="#" id="GenerarDocumento">Generar Documetos</a>
+		</div>
+		
+		<div class="contenedor">
+			<div class="logo-interior">					
+			</div>
+			<a href="../1_Administrador/1_PHP/CerrarSesion.php" >Cerrar Sesion</a>
+		</div>
+	</div>
+<br>
+<div id="contenido">
+	<br>
+	<br>
+	<h1 class="principal">Area Vinculación y Estadías</h1>
+	<img class="fondo" src="imagenes/utsv-contacto.jpg">
+</div>
+</body>
+</HTML>
